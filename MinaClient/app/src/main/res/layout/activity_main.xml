@@ -11,7 +11,21 @@
     tools:context="io.github.dearzack.minaclient.MainActivity">
 
     <TextView
+        android:id="@+id/text_msg"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:layout_below="@id/text_msg"
+        android:id="@+id/connect"
+        android:text="连接"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <Button
+        android:layout_below="@id/connect"
+        android:id="@+id/send"
+        android:text="发送消息"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
 </RelativeLayout>
