@@ -76,6 +76,7 @@ public class ConnectionManager {
 
         @Override
         public void sessionOpened(IoSession session) throws Exception {
+            SessionManager.getInstance().setSession(session);
             Log.e("Mina", "sessionOpened");
 
         }
@@ -88,6 +89,12 @@ public class ConnectionManager {
                 intent.putExtra(MESSAGE, message.toString());
                 LocalBroadcastManager.getInstance(mContext).sendBroadcast(intent);
             }
+        }
+
+        @Override
+        public void messageSent(IoSession session, Object message) throws Exception {
+            Log.e("Mina", "messageSent");
+            super.messageSent(session, message);
         }
     }
 

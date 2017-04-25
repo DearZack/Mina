@@ -53,6 +53,7 @@ public class MinaServer {
             String str = message.toString();
             Date date = new Date();
             session.write(date.toString());
+            System.out.println(str);
             logger.info("messageReceived");
         }
 
